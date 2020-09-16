@@ -1,0 +1,49 @@
+{
+  "name": "appruve",
+  "version": "0.1.0",
+  "description": "Nodejs wrapper for appruve API",
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha \"test/*.test.js\""
+  },
+  "keywords": [
+    "appruve",
+    "identity",
+    "verification",
+    "nodejs",
+    "api-endpoints",
+    "rest-api"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devamaz/appruve"
+  },
+  "bugs": {
+    "url": "https://github.com/devamaz/appruve/issues"
+  },
+  "homepage": "https://github.com/devamaz/appruve#readme",
+  "author": "devamaz <ahmad.abdulaziz37@gmail.com>",
+  "license": "MIT",
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "got": "^11.6.2",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "standard": "^14.3.4"
+  }
+}
