@@ -14,6 +14,12 @@ const ugandaTelco = require('../endpoints/Identity/uganda_telco');
 const ghanaPassport = require('../endpoints/Identity/ghana_passport');
 const ghanaSSNIT = require('../endpoints/Identity/ghana_ssnit');
 const ghanaDriverLicense = require('../endpoints/Identity/ghana_driver_license');
+const ghanaTIN = require('../endpoints/Business/ghana_tin');
+const kenyaKRA = require('../endpoints/Business/kenya_kra_pin');
+const nigeriaCAC = require('../endpoints/Business/nigeria_cac');
+const nigeriaTIN = require('../endpoints/Business/nigeria_tin');
+const nigeriaValiateBVN = require('../endpoints/Agency/validate_bvn');
+const nigeriaVerifyBVN = require('../endpoints/Agency/bvn_otp');
 
 /* Any param with '$' at the end is a REQUIRED param both for request body param(s) and request route params */
 const apiEndpoints = Object.assign(
@@ -27,7 +33,13 @@ const apiEndpoints = Object.assign(
   ugandaTelco,
   ghanaPassport,
   ghanaSSNIT,
-  ghanaDriverLicense
+  ghanaDriverLicense,
+  ghanaTIN,
+  kenyaKRA,
+  nigeriaCAC,
+  nigeriaTIN,
+  nigeriaValiateBVN,
+  nigeriaVerifyBVN
 );
 
 /*!
@@ -269,8 +281,11 @@ const makeMethod = function (config) {
     }
 
     let reqVerb = config.method.toLowerCase();
+    let baseUrl = this.httpClientBaseOptions.baseUrl;
 
-    return this.httpBaseClient[reqVerb](pathname, httpConfig);
+    httpConfig.headers['Authorization'] = this.bearerHeaderValue;
+
+    return this.httpBaseClient[reqVerb](`${baseUrl}${pathname}`, httpConfig);
   };
 };
 
@@ -283,6 +298,8 @@ class Appruve {
       live: 'https://api.appruve.co/v1',
     };
 
+    this.bearerHeaderValue = `Bearer ${apiKey}`;
+
     this.httpClientBaseOptions = {
       baseUrl: environment.test(appEnv)
         ? this.api_base.sandbox
@@ -290,14 +307,9 @@ class Appruve {
       headers: {
         Authorization: `Bearer ${apiKey}`,
       },
-      
     };
 
-    this.httpBaseClient = got.extend(this.httpClientBaseOptions);
-  }
-
-  mergeNewOptions(newOptions) {
-    this.httpBaseClient = this.httpBaseClient.extend(newOptions);
+    this.httpBaseClient = got;
   }
 }
 

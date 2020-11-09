@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const Appruve = require('./src/Appruve')
+const Appruve = require('./src/Appruve');
 
-Appruve.prototype.version = '0.0.1'
+Appruve.prototype.version = '0.1.3';
 
-module.exports = Appruve
+module.exports = Appruve;

@@ -44,7 +44,7 @@ promise1.then(function(response){
    if(response.body.status === false){
      console.error(response.body.message);
    }
-   let data = response.body.data;
+   let data = response.body;
 }).catch(function (error) {
   // deal with error
 })
@@ -81,6 +81,15 @@ promise2.then(function(response){
   - appruve.ghanaSSNIT()
   - appruve.ghanaDriverLicense()
 
+- business
+  - appruve.nigeriaCAC()
+  - appruve.nigeriaTIN()
+  - appruve.ghanaTIN()
+  - appruve.kenyaKRA()
+
+- Agency
+  - appruve.validateBVN()
+  - appruve.verifyBVN()
 
 
 # License
