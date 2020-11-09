@@ -98,8 +98,9 @@ MIT
 
 # Credits
 
-- [Ifeora Okechukwu](https://twitter.com/isocroft)
 - [Ahmad Abdul-Aziz](https://twitter.com/devamaz)
+- [Ifeora Okechukwu](https://twitter.com/isocroft)
+
 
 
 
