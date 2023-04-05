@@ -20,6 +20,7 @@ const nigeriaCAC = require('../endpoints/Business/nigeria_cac');
 const nigeriaTIN = require('../endpoints/Business/nigeria_tin');
 const nigeriaValiateBVN = require('../endpoints/Agency/validate_bvn');
 const nigeriaVerifyBVN = require('../endpoints/Agency/bvn_otp');
+const nigeriavNIN = require('../endpoints/Identity/nigeria_vNIN')
 
 /* Any param with '$' at the end is a REQUIRED param both for request body param(s) and request route params */
 const apiEndpoints = Object.assign(
@@ -39,7 +40,9 @@ const apiEndpoints = Object.assign(
   nigeriaCAC,
   nigeriaTIN,
   nigeriaValiateBVN,
-  nigeriaVerifyBVN
+  nigeriaVerifyBVN,
+  nigeriavNIN
+  
 );
 
 /*!
