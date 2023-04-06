@@ -4,11 +4,10 @@ module.exports = {
   /*
   Verify Nigeria National ID
   @params: id, first_name, last_name, middle_name, date_of_birth, phone_number, gender
-  @deprecated: This service is not available currently due to changes by the NIMC of Nigeria. Use nigeriavNIN instead.
   */
-  nigeriaNationalId: {
+  nigeriavNIN: {
     method: 'POST',
-    path: '/verifications/ng/national_id',
+    path: '/verifications/ng/virtual_nin',
     send_json: true,
     params: {
       id$: String,
