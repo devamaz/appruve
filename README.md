@@ -70,7 +70,7 @@ promise2.then(function(response){
 >Each method expects an object literal with both **route parameters** and **request parameters (query / body)**. Please, go through the _src/endpoints_ folder to see the specific items that should make up the object literal for each method
 
 - identity
-  - appruve.nigeriaNationalId()
+  - appruve.nigeriaNationalId() DEPRECATED
   - appruve.nigeriaVoterId()
   - appruve.nigeriaDriverLicense()
   - appruve.nigeriaBVN()
@@ -80,6 +80,7 @@ promise2.then(function(response){
   - appruve.ghanaPassport()
   - appruve.ghanaSSNIT()
   - appruve.ghanaDriverLicense()
+  - appruve.nigeriavNIN()
 
 - business
   - appruve.nigeriaCAC()
@@ -100,6 +101,7 @@ MIT
 
 - [Ahmad Abdul-Aziz](https://twitter.com/devamaz)
 - [Ifeora Okechukwu](https://twitter.com/isocroft)
+- [Halidu Ibrahim](https://twitter.com/yllah06)
 
 
 
